@@ -1,2 +1,2 @@
-### Making Vainavi Understand
+### Hello Sanskar
 ## What Git is?
