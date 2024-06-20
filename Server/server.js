@@ -10,7 +10,7 @@ const cors = require('cors');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'chrome-extension://cegjmmlimnjkefkfbkabgpgeofcpfkoe', // Replace with your extension's origin
+    origin: 'chrome-extension://fcpemoecajoolhlhghfemekfkofljlij', // Replace with your extension's origin
     methods: ['GET', 'POST'], // Add other methods if needed
     allowedHeaders: ['Content-Type'],
   }));
