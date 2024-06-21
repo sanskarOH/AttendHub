@@ -1,41 +1,45 @@
 const { google } = require('googleapis');
 const { authenticate } = require('./gauth');
 
-const updateSheet = async (spreadsheetId, range, attendees) => {
+const updateSheet = async (spreadsheetId, range, values) => {
     try {
         const auth = await authenticate();
         const sheets = google.sheets({ version: 'v4', auth });
         const valueInputOption = 'RAW';
+        const resource = { values };
 
-        // Get current date in YYYY-MM-DD format
-        const currentDate = new Date().toISOString().split('T')[0];
+        const existingValues = await sheets.spreadsheets.values.get({
+            spreadsheetId,
+            range
+        });
 
-        // Flatten the array of attendees into a single array of strings
-        const flattenedAttendees = attendees.flat();
-
-        // Prepare rows to append starting from A3
-        const rows = attendees.map(attendee => [currentDate, attendee]);
-
-        const resource = {
-            values: rows
-        };
-
-        // Adjust range to start from A3
-        const newRange = `${range}!A3`;
+        const hasNewValues = false;
+        for (let i = 0; i<existingValues.length;i++){
+            if (existingValues[i] !== values[i]){
+                hasNewValues = true;
+                break;
+            }
+        }
 
         // Debugging logs
         console.log('Spreadsheet ID:', spreadsheetId);
-        console.log('Range:', newRange);
-        console.log('Values:', rows);
+        console.log('Range:', range);
+        console.log('Values:', values);
 
-        const result = await sheets.spreadsheets.values.append({
-            spreadsheetId,
-            range: newRange,
-            valueInputOption,
-            resource
-        });
+        if(!hasNewValues){
+            console.log('no new values to update in sheets!')
+            resource;
+        } else{
+            const result = await sheets.spreadsheets.values.update({
+                spreadsheetId,
+                range,
+                valueInputOption,
+                resource
+            });
+            console.log('Cells updated:', result.data.updatedCells);
+        }
 
-        console.log('Rows appended:', result.data.updates.updatedRows);
+    
     } catch (error) {
         console.error('Error updating sheet:', error);
     }
