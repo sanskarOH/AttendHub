@@ -5,7 +5,8 @@
     "version": "1.0",
     "permissions": [
         "activeTab",
-        "scripting"
+        "scripting",
+        "storage"
     ],
     "action": {
         "default_popup": "popup/popup.html",
