@@ -78,7 +78,7 @@ let stop = STOP = function(){
     });
 
     // // Create a blob for the CSV content
-     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
 
     // // Create a temporary anchor element and initiate download
      const link = document.createElement('a');
@@ -139,11 +139,6 @@ statusText.style.background = "transparent";
 const blinkSpeed = 500;
 setInterval(function() { statusText.style.visibility = (statusText.style.visibility == 'hidden' ? '' : 'hidden'); }, blinkSpeed);
 
-/*
--------------------
-start the extension
--------------------
-*/
 
 let engine = setInterval(startEngine, 1000);
 
