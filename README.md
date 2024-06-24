@@ -44,6 +44,20 @@
     - In that open `.env` file
     - Add your Google Spreadsheet ID.
     - ```https://docs.google.com/spreadsheets/d/1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR/edit?gid=0#gid=0``` here it is after d/ to /edit that is ```1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR```
+## Starting the Backend Server:
+1. **Navigate to the `server` folder:**
+    ```sh
+    cd server
+    ```
+2. **Install the dependencies:**
+    ```sh
+    npm install
+    ```
+3. **Start the server:**
+    ```sh
+    npm start
+    ```
+    The server should now be running and ready to handle requests from the extension.
 
 ## Usage:
 1. **Join the Google Meet:**
