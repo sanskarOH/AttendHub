@@ -1,6 +1,8 @@
 
 navLinks = document.getElementById("nav-links"); 
-
+document.getElementById('my-btn').addEventListener('click', function() {
+      window.location.href = 'https://github.com/sanskarOH/AttendHub#Readme';
+    });
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
