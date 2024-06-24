@@ -46,7 +46,7 @@
     - ```https://docs.google.com/spreadsheets/d/1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR/edit?gid=0#gid=0``` here it is after d/ to /edit that is ```1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR```
 
 ## Usage:
-1. **Open the Participants Menu in Google Meet:**
+1. **Join the Google Meet:**
     - Join a Google Meet session.
 2. **Press the Start Tracking  Button:**
     - Click the "Start Tracking" button provided by the AttendHub extension.
