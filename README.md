@@ -49,7 +49,6 @@
 1. **Open the Participants Menu in Google Meet:**
     - Join a Google Meet session.
 2. **Press the Start Tracking  Button:**
-    - Click the "Log List" button provided by the AttendHub extension.
-    - The list of participants will be logged to your configured Google Sheet.
+    - Click the "Start Tracking" button provided by the AttendHub extension.
+    - As soon as you end or leave the meet the list of participants will be logged to your configured Google Sheets , as well as downloaded as a .csv file.
 
-Tada!! The list is logged.
