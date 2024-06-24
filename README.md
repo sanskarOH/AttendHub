@@ -45,9 +45,9 @@
     - Add your Google Spreadsheet ID.
     - ```https://docs.google.com/spreadsheets/d/1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR/edit?gid=0#gid=0``` here it is after d/ to /edit that is ```1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR```
 ## Starting the Backend Server:
-1. **Navigate to the `server` folder:**
+1. **Navigate to the `Server` folder:**
     ```sh
-    cd server
+    cd Server
     ```
 2. **Install the dependencies:**
     ```sh
