@@ -1,17 +1,55 @@
 # Attend Hub
 
-AttendHub is an attendance management system designed to simplify and streamline the process of tracking attendance for educational institutions and organizations. It offers an intuitive interface for easy navigation and efficient attendance recording.
+[AttendHub](https://sanskaroh.github.io/AttendHub/) is an attendance management system designed to simplify and streamline the process of tracking attendance for educational institutions and organizations. It offers an intuitive interface for easy navigation and efficient attendance recording.
 
-### Installation: ###
-1)Clone this repo <br>
-2)Click on extensions tab in your browser <br>
-3)Enable the Devoloper mode option <br>
-4)Click on load unpacked option <br>
-5)Select the cloned folder and then select the extensions folder<br>
-6)The extension is now ready to use from extensions menu <br>
-### Usage: ###
-1)Open the participants menu in meet<br>
-2)Press the log list button <br>
-Tada!! The list is logged <br>
+## Installation:
+1. **Clone this repository:**
+    ```sh
+    git clone https://github.com/yourusername/AttendHub.git
+    ```
+2. **Open your browser and navigate to the Extensions tab.**
+3. **Enable Developer Mode:**
+    - In Chrome, toggle the switch in the top right corner to enable Developer mode.
+4. **Load the Unpacked Extension:**
+    - Click the "Load unpacked" button.
+    - Select the cloned folder and then select the `extensions` folder.
+5. The extension is now ready to use from the extensions menu.
 
+## Google Service Account Setup:
+1. **Create a Google Cloud Project:**
+    - Go to the [Google Cloud Console](https://console.cloud.google.com/).
+    - Create a new project or select an existing one.
+2. **Enable the Google Sheets API:**
+    - Navigate to "APIs & Services" > "Library".
+    - Search for "Google Sheets API" and enable it.
+3. **Create a Service Account:**
+    - Go to "APIs & Services" > "Credentials".
+    - Click "Create Credentials" and select "Service Account".
+    - Follow the prompts to create a new service account.
+4. **Create a JSON Key:**
+    - After creating the service account, go to "Keys" and click "Add Key" > "Create new key".
+    - Select "JSON" and click "Create". This will download a JSON file containing your service account credentials.
+    - Rename that file to keys.json.
+5. **Share Your Google Sheet with the Service Account:**
+    - Open your Google Sheet.
+    - Click "Share" and share the sheet with the service account email (ending in `@your-project-id.iam.gserviceaccount.com`).
 
+## Configuration:
+1. **Add the Google Sheets API Key:**
+    - Open the `config` folder in the `extensions` folder.
+    - Add the keys.json file in that folder.
+
+2. **Set the Spreadsheet ID:**
+    - Open the `config` folder in the `extensions` folder.
+    - In that open `.env` file
+    - Add your Google Spreadsheet ID.
+    - ```https://docs.google.com/spreadsheets/d/1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR/edit?gid=0#gid=0``` here it is after d/ to /edit that is ```1fkByy5z6NnHKAkhLisifXlh-gdmy4SsbirqpzGRR```
+
+## Usage:
+1. **Open the Participants Menu in Google Meet:**
+    - Join a Google Meet session.
+2. **Press the Start Tracking  Button:**
+    - Click the "Log List" button provided by the AttendHub extension.
+    - The list of participants will be logged to your configured Google Sheet.
+
+Tada!! The list is logged.
